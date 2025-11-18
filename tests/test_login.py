@@ -1,5 +1,8 @@
 # Importa a página de login
 from pages.login_page import LoginPage
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 # Teste de login usando pytest.
 def test_login(driver):
@@ -24,5 +27,5 @@ def test_login(driver):
         EC.element_to_be_clickable((By.ID, "meu-botao"))
     )
     
-    # 5. Clica no botão
+    # Clica no botão
     botao.click()
